@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lemmings 3D with Three.js</title>
+  <style>
+    body { 
+      margin: 0; 
+      overflow: hidden; 
+      background-color: #000033;
+    }
+    #error {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="error">Loading error. Please check console for details.</div>
+  <script>
+    window.addEventListener('error', function(e) {
+      document.getElementById('error').style.display = 'block';
+      console.error('Error loading:', e);
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.1/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

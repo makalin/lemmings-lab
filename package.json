@@ -1,0 +1,34 @@
+{
+  "name": "lemmings-lab",
+  "version": "0.1.0",
+  "description": "A collection of experimental lemmings-style games",
+  "private": true,
+  "workspaces": [
+    "lemmings3d",
+    "lemmings2d",
+    "lemmings-voxel"
+  ],
+  "scripts": {
+    "start": "npm run start:3d",
+    "start:3d": "cd lemmings3d && npm start",
+    "start:2d": "cd lemmings2d && npm start",
+    "start:voxel": "cd lemmings-voxel && npm start",
+    "build": "npm run build:3d && npm run build:2d && npm run build:voxel",
+    "build:3d": "cd lemmings3d && npm run build",
+    "build:2d": "cd lemmings2d && npm run build",
+    "build:voxel": "cd lemmings-voxel && npm run build"
+  },
+  "keywords": [
+    "lemmings",
+    "game",
+    "webgl",
+    "threejs",
+    "javascript",
+    "html5"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
